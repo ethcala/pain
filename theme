@@ -175,6 +175,13 @@
     <meta name="text:link6 title" content=""/>
     <meta name="text:link7 url" content=""/>
     <meta name="text:link7 title" content=""/>
+    
+    <meta name="if:Centered Spoons" content="1"/>
+    <meta name="text:Current Spoons" content="12"/>
+    <meta name="text:Maximum Spoons" content="12"/>
+    <meta name="color:Full Spoons" content="#000"/>
+    <meta name="color:Empty Spoons" content="#ddd"/>
+    <meta name="text:Spoon Size" content="16"/>
     {/block:Hidden}
 
     <link rel="stylesheet" href="//dl.dropbox.com/s/wk8hceu4qm6sfii/reset.css">
@@ -209,23 +216,23 @@
             --NPF-Caption-Spacing: {select:content padding}px;
             --NPF-Image-Spacing: {select:photoset gutter}px;
         }
+
+    </style>
         
-        <script>
+    <script>
     $(document).ready(() => {
         for (var i=0; i < {text:Current Spoons}; i++) {
             console.log("current spoons")
-            $(".spoons").append(`<span style="color:{color:Full Spoons}"><i class="fa fa-heart"></i></span>`);
+            $(".spoons").append(`<span style="color:{color:Full Spoons}"><i class="fas fa-utensil-spoon"></i></span>`);
             console.log($(".spoons"));
         }
     
         for (var i=0; i < ({text:Maximum Spoons} - {text:Current Spoons}); i++) {
             console.log("max spoons")
-            $(".spoons").append(`<span style="color:{color:Empty Spoons}"><i class="fa fa-heart"></i></span>`);
+            $(".spoons").append(`<span style="color:{color:Empty Spoons}"><i class="fas fa-utensil-spoon"></i></span>`);
         }
     });
 </script>
-
-    </style>
 
 </head>
 
